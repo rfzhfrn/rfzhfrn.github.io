@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>@MPLIndonesiaSeason17 | Linktree</title>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Reset ── */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ── Page ── */
+    body {
+      font-family: 'Mulish', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      background-color: #3d0b0b;
+      padding: 24px 16px 48px;
+    }
+
+    /* ── Outer wrapper ── */
+    .page-wrap {
+      width: 100%;
+      max-width: 680px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    /* ── Top icon buttons ── */
+    .top-buttons {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .top-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.15);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.18s;
+    }
+
+    .top-btn:hover {
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    .top-btn svg {
+      width: 20px;
+      height: 20px;
+      fill: #ffffff;
+    }
+
+    /* ── Centre card ── */
+    .card {
+      width: 100%;
+      background-color: #b41818;
+      border-radius: 24px;
+      padding: 40px 28px 36px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* ── Avatar ── */
+    .avatar {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      border: 3px solid rgba(255, 255, 255, 0.6);
+      overflow: hidden;
+      margin-bottom: 16px;
+      background: #8b1010;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ── Username ── */
+    .username {
+      font-size: 17px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 8px;
+      letter-spacing: 0.01em;
+    }
+
+    /* ── Bio ── */
+    .bio {
+      font-size: 13px;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.85);
+      text-align: center;
+      line-height: 1.5;
+      max-width: 300px;
+      margin-bottom: 20px;
+    }
+
+    /* ── Social icons row ── */
+    .socials {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    .social-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: opacity 0.18s, transform 0.15s;
+    }
+
+    .social-icon:hover {
+      opacity: 0.75;
+      transform: scale(1.12);
+    }
+
+    .social-icon svg {
+      width: 22px;
+      height: 22px;
+      fill: #ffffff;
+    }
+
+    /* ── Link buttons ── */
+    .links {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .link-btn {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+      height: 56px;
+      border-radius: 9999px;
+      border: 1.5px solid rgba(255, 255, 255, 0.25);
+      background: rgba(255, 255, 255, 0.06);
+      text-decoration: none;
+      color: #ffffff;
+      font-family: 'Mulish', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.18s, border-color 0.18s, transform 0.13s;
+      position: relative;
+    }
+
+    .link-btn:hover {
+      background: rgba(255, 255, 255, 0.14);
+      border-color: rgba(255, 255, 255, 0.45);
+      transform: scale(1.01);
+    }
+
+    .link-btn:active {
+      transform: scale(0.99);
+    }
+
+    /* Icon box on left */
+    .btn-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .btn-icon svg {
+      width: 18px;
+      height: 18px;
+      fill: #ffffff;
+    }
+
+    /* Label centred in button */
+    .btn-label {
+      flex: 1;
+      text-align: center;
+    }
+
+    /* With icon: shift label left to compensate for icon width */
+    .link-btn.has-icon .btn-label {
+      margin-left: -34px;
+    }
+
+    /* Three-dot menu on right */
+    .btn-dots {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 18px;
+      letter-spacing: 1px;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    /* ── CTA button ── */
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 28px;
+      border-radius: 9999px;
+      background: #ffffff;
+      color: #1a0505;
+      font-family: 'Mulish', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: opacity 0.18s, transform 0.13s;
+    }
+
+    .cta-btn:hover {
+      opacity: 0.9;
+      transform: scale(1.02);
+    }
+
+    /* ── Footer ── */
+    .footer {
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.45);
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .footer a {
+      color: rgba(255, 255, 255, 0.45);
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .footer span {
+      opacity: 0.5;
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <!-- Top buttons -->
+  <div class="top-buttons">
+    <button class="top-btn" title="Linktree">
+      <svg viewBox="0 0 40 49" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22.795 0L40 17.204H30.136L40 27.07H27.459V48.863H12.541V27.07H0L9.864 17.204H0L17.205 0H22.795Z"/>
+      </svg>
+    </button>
+    <button class="top-btn" title="Bagikan">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92c0-1.61-1.31-2.92-2.92-2.92z"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Centre card -->
+  <div class="card">
+
+    <!-- Avatar -->
+    <div class="avatar">
+      <img
+        src="https://ugc.production.linktr.ee/052a7f55-4b71-4f2b-bc39-e2a0201cf4c5_45c6f3549f1b1dc10f4510f474c052c1-tplv-tiktokx-cropcenter-1080-1080.jpeg"
+        alt="MPL Indonesia"
+      />
+    </div>
+
+    <!-- Username & bio -->
+    <p class="username">@MPLIndonesiaSeason17</p>
+    <p class="bio">Akun official Mobile Legends: Bang Bang Professional League Indonesia 🇮🇩</p>
+
+    <!-- Social icons -->
+    <div class="socials">
+
+      <!-- Instagram -->
+      <a class="social-icon" href="https://www.instagram.com/mpl.id.official/" target="_blank" rel="noopener" title="Instagram">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+        </svg>
+      </a>
+
+      <!-- YouTube -->
+      <a class="social-icon" href="https://www.youtube.com/@MPLIndonesia" target="_blank" rel="noopener" title="YouTube">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+        </svg>
+      </a>
+
+      <!-- TikTok -->
+      <a class="social-icon" href="https://www.tiktok.com/@mpl.id.official" target="_blank" rel="noopener" title="TikTok">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+        </svg>
+      </a>
+
+      <!-- Facebook -->
+      <a class="social-icon" href="https://www.facebook.com/mpl.id.official/?locale=id_ID" target="_blank" rel="noopener" title="Facebook">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+        </svg>
+      </a>
+
+      <!-- X -->
+      <a class="social-icon" href="https://x.com/mplidofficial?lang=en" target="_blank" rel="noopener" title="X">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+        </svg>
+      </a>
+
+    </div>
+
+    <!-- Link buttons -->
+    <div class="links">
+
+      <!-- Ticket (no icon) -->
+      <a class="link-btn" href="https://id-mpl.com/ticket" target="_blank" rel="noopener">
+        <span class="btn-label">Beli Tiket MPL ID Season 17 di sini</span>
+        <span class="btn-dots">⋮</span>
+      </a>
+
+      <!-- TikTok -->
+      <a class="link-btn has-icon" href="https://www.tiktok.com/@mpl.id.official" target="_blank" rel="noopener">
+        <span class="btn-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+          </svg>
+        </span>
+        <span class="btn-label">TikTok</span>
+        <span class="btn-dots">⋮</span>
+      </a>
+
+      <!-- Facebook -->
+      <a class="link-btn has-icon" href="https://www.facebook.com/mpl.id.official/?locale=id_ID" target="_blank" rel="noopener">
+        <span class="btn-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+        </span>
+        <span class="btn-label">Facebook</span>
+        <span class="btn-dots">⋮</span>
+      </a>
+
+      <!-- X -->
+      <a class="link-btn has-icon" href="https://x.com/mplidofficial?lang=en" target="_blank" rel="noopener">
+        <span class="btn-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </span>
+        <span class="btn-label">X</span>
+        <span class="btn-dots">⋮</span>
+      </a>
+
+      <!-- YouTube -->
+      <a class="link-btn has-icon" href="https://www.youtube.com/@MPLIndonesia" target="_blank" rel="noopener">
+        <span class="btn-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+          </svg>
+        </span>
+        <span class="btn-label">YouTube</span>
+        <span class="btn-dots">⋮</span>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- CTA button -->
+  <a class="cta-btn" href="https://linktr.ee" target="_blank" rel="noopener">
+    Join MPLIndonesiaSeason16 on Linktree
+  </a>
+
+  <!-- Footer -->
+  <div class="footer">
+    <a href="#">Cookie Preferences</a>
+    <span>·</span>
+    <a href="#">Report</a>
+    <span>·</span>
+    <a href="https://linktr.ee/privacy" target="_blank" rel="noopener">Privacy</a>
+  </div>
+
+</div>
+</body>
+</html>
