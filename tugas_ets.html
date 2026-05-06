@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Marvel Entertainment</title>
+  <meta name="description" content="Marvel Entertainment - Where Heroes Are Born">
+  <meta name="keywords" content="Marvel, MCU, Avengers, Comics, Movies, Disney+">
+
+  <!-- Favicons -->
+  <link href="assets/img/marvel-transparent-marvel-free-free-png.webp" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Marvel Custom Color Override -->
+  <style>
+    /* ===== MARVEL RED COLOR THEME ===== */
+    :root {
+      --marvel-red: #e23636;
+      --marvel-dark-red: #b71c1c;
+      --marvel-black: #0d0d0d;
+      --marvel-white: #ffffff;
+      --marvel-gray: #f5f5f5;
+    }
+
+    /* Override Arsha's default blue with Marvel red */
+    a,
+    .btn-get-started,
+    .read-more,
+    .service-item .icon i,
+    .portfolio-filters li.filter-active,
+    .cta-btn,
+    .navmenu a:hover,
+    .navmenu .active {
+      color: var(--marvel-red) !important;
+    }
+
+    .btn-get-started,
+    .cta-btn {
+      background-color: var(--marvel-red) !important;
+      border-color: var(--marvel-red) !important;
+      color: #fff !important;
+    }
+
+    .btn-get-started:hover,
+    .cta-btn:hover {
+      background-color: var(--marvel-dark-red) !important;
+    }
+
+    .hero.section.dark-background {
+      background-color: var(--marvel-black) !important;
+      background-image: linear-gradient(135deg, #0d0d0d 0%, #1a0000 50%, #2d0000 100%) !important;
+    }
+
+    .call-to-action.section.dark-background {
+      background-color: var(--marvel-dark-red) !important;
+    }
+
+    .section-title h2::after {
+      background-color: var(--marvel-red) !important;
+    }
+
+    .service-item:hover {
+      border-color: var(--marvel-red) !important;
+    }
+
+    /* Hero Marvel Logo Text */
+    .hero .sitename-hero {
+      font-size: 3.5rem;
+      font-weight: 900;
+      color: var(--marvel-red);
+      letter-spacing: -1px;
+      text-transform: uppercase;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Navbar override */
+    .header {
+      background-color: rgba(13, 13, 13, 0.97) !important;
+    }
+
+    .navmenu a {
+      color: #fff !important;
+    }
+
+    .navmenu a:hover,
+    .navmenu .active {
+      color: var(--marvel-red) !important;
+    }
+
+    .logo .sitename {
+      color: var(--marvel-red) !important;
+      font-weight: 900 !important;
+      font-size: 1.8rem !important;
+      text-transform: uppercase !important;
+      letter-spacing: 2px !important;
+    }
+
+    /* About section list icon */
+    .about .content ul i {
+      color: var(--marvel-red) !important;
+    }
+
+    /* Portfolio filter active */
+    .portfolio-filters li.filter-active,
+    .portfolio-filters li:hover {
+      color: var(--marvel-red) !important;
+    }
+
+    /* Highlighted text span in unggulan/about */
+    .content h3 span {
+      color: var(--marvel-red) !important;
+    }
+
+    /* CTA section text */
+    .call-to-action h3,
+    .call-to-action p {
+      color: #fff !important;
+    }
+
+    /* Hero stats */
+    .hero-stat .number {
+      color: var(--marvel-red);
+      font-size: 2rem;
+      font-weight: 800;
+    }
+
+    .hero-stat {
+      text-align: center;
+      padding: 10px 20px;
+    }
+
+    .hero-stat .label {
+      color: #ccc;
+      font-size: 0.85rem;
+    }
+
+    .hero-stats-row {
+      margin-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 1.5rem;
+    }
+
+    /* Phase badge */
+    .phase-badge {
+      display: inline-block;
+      background-color: var(--marvel-red);
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 6px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* Portfolio info overlay */
+    .portfolio-item .portfolio-info {
+      background: rgba(226, 54, 54, 0.85) !important;
+    }
+
+    /* Marvel hero image placeholder */
+    .hero-img-placeholder {
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 350px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-img-placeholder img {
+      width: 100%;
+      height: auto;
+      max-height: 380px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 0 40px rgba(226,54,54,0.4);
+    }
+
+    /* Featured movies card custom style */
+    .movie-card-img {
+      height: 200px;
+      object-fit: cover;
+      width: 100%;
+      background-color: #1a0000;
+    }
+
+    /* Testimonials / Quotes section */
+    .testimonials .testimonial-item {
+      border-left: 4px solid var(--marvel-red) !important;
+    }
+
+    /* ===== INSTAGRAM POSTS SECTION (Excelso-style) ===== */
+    .posts-section .post-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .posts-section .post-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(226, 54, 54, 0.25);
+    }
+
+    .posts-section .post-card img {
+      width: 100%;
+      aspect-ratio: 3 / 4; /* portrait kayak Excelso */
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .posts-section .post-card:hover img {
+      transform: scale(1.04);
+    }
+
+    .posts-section .post-info {
+      padding: 16px 18px 18px;
+      background: #fff;
+      border-top: 3px solid var(--marvel-red);
+    }
+
+    .posts-section .post-category {
+      display: inline-block;
+      background-color: var(--marvel-red);
+      color: #fff;
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .posts-section .post-info h5 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1a0000;
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+
+    .posts-section .post-info p {
+      font-size: 0.85rem;
+      color: #666;
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    .posts-section .post-info .post-meta {
+      font-size: 0.75rem;
+      color: #999;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .posts-section .post-info .post-meta i {
+      color: var(--marvel-red);
+    }
+
+    .posts-section .post-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .posts-section .post-filters li {
+      list-style: none;
+      padding: 6px 18px;
+      border: 2px solid #ddd;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #555;
+      transition: all 0.25s;
+    }
+
+    .posts-section .post-filters li.filter-active,
+    .posts-section .post-filters li:hover {
+      background-color: var(--marvel-red);
+      border-color: var(--marvel-red);
+      color: #fff;
+    }
+
+    /* read-more color */
+    .read-more span {
+      color: var(--marvel-red) !important;
+    }
+
+    .read-more i {
+      background-color: var(--marvel-red) !important;
+    }
+  </style>
+
+</head>
+
+<body class="index-page">
+
+  <!-- ======= HEADER / NAVBAR ======= -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <h1 class="sitename">MARVEL</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#franchise">Franchise</a></li>
+          <li><a href="#posts">Post</a></li>
+          <li><a href="#movies">Movies</a></li>
+          <li><a href="#disney">Watch Now</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <main class="main">
+
+    <!-- ======= SECTION 1: HERO ======= -->
+    <section id="hero" class="hero section dark-background">
+
+      <div class="container">
+        <div class="row gy-4 align-items-center">
+
+          <!-- Left: Text -->
+          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out">
+            <h1>Marvel Entertainment</h1>
+            <p>Watch Our Trailer for Upcoming Movies, Spiderman: Brand New Day.</p>
+            <div class="d-flex gap-3 flex-wrap">
+              <a href="#about" class="btn-get-started">Explore Universe</a>
+              <a href="https://www.youtube.com/watch?v=8TZMtslA3UY"
+                class="btn-watch-video d-flex align-items-center"
+                target="_blank" rel="noopener">
+                <i class="bi bi-play-circle"></i><span>Watch Trailer</span>
+              </a>
+            </div>
+
+            <!-- Stats row -->
+            <div class="row hero-stats-row g-2">
+              <div class="col-4 hero-stat">
+                <div class="number">85+</div>
+                <div class="label">Years of Legacy</div>
+              </div>
+              <div class="col-4 hero-stat">
+                <div class="number">33+</div>
+                <div class="label">MCU Films</div>
+              </div>
+              <div class="col-4 hero-stat">
+                <div class="number">64.5M</div>
+                <div class="label">IG Followers</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Marvel Image -->
+          <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
+            <div class="hero-img-placeholder">
+              <img
+                src="assets/img/marvel logo 2.jpg"
+                alt="Marvel Entertainment Logo"
+                class="img-fluid animated">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- ======= SECTION 2: ABOUT ======= -->
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About Marvel</h2>
+        <p>The story of the world's most powerful entertainment brand</p>
+      </div>
+
+      <div class="container">
+        <div class="row gy-4">
+
+          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+            <p>
+              Marvel Entertainment, LLC is one of the world's most prominent character-based entertainment companies,
+              built on a proven library of over 8,000 characters featured in a variety of media over 85 years.
+              Marvel utilizes its character franchises in entertainment, licensing, publishing, games, and digital media.
+            </p>
+            <ul>
+              <li><i class="bi bi-check2-circle"></i>
+                <span>Founded in 1939 by Martin Goodman as Timely Comics, now a powerhouse in global entertainment.</span>
+              </li>
+              <li><i class="bi bi-check2-circle"></i>
+                <span>Home to iconic heroes like Iron Man, Spider-Man, Captain America, Thor, and the Avengers.</span>
+              </li>
+              <li><i class="bi bi-check2-circle"></i>
+                <span>Part of The Walt Disney Company since 2009, expanding across films, TV, games, and comics.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <p>
+              The Marvel Cinematic Universe (MCU) is the highest-grossing film franchise of all time, with more than
+              $29 billion earned at the global box office across 33 interconnected films and multiple Disney+ series.
+              From the cosmic reaches of space to the streets of New York City, Marvel stories captivate billions
+              of fans worldwide through compelling characters and extraordinary storytelling.
+            </p>
+            <a href="https://www.marvel.com" class="read-more" target="_blank">
+              <span>Read More</span><i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- ======= SECTION 3: FRANCHISE (Services Section) ======= -->
+    <section id="franchise" class="services section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Our Franchise</h2>
+        <p>Marvel Entertainment spans across multiple platforms bringing heroes to life in every form</p>
+      </div>
+
+      <div class="container">
+        <div class="row gy-4">
+
+          <!-- Comics -->
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-book-half icon"></i></div>
+              <h4><a href="https://www.marvel.com/comics" class="stretched-link" target="_blank">Comics</a></h4>
+              <p>Over 27,000 comic series published since 1939. The origin of every Marvel hero starts on the page.</p>
+            </div>
+          </div>
+
+          <!-- Movies -->
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-camera-reels-fill icon"></i></div>
+              <h4><a href="https://www.marvel.com/movies" class="stretched-link" target="_blank">Movies</a></h4>
+              <p>33+ blockbuster MCU films earning over $29 billion globally. The world's biggest film franchise.</p>
+            </div>
+          </div>
+
+          <!-- TV Series -->
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-tv-fill icon"></i></div>
+              <h4><a href="https://www.disneyplus.com" class="stretched-link" target="_blank">TV Series</a></h4>
+              <p>Exclusive Marvel shows on Disney+ including Daredevil, Loki, WandaVision, and The Punisher.</p>
+            </div>
+          </div>
+
+          <!-- Games & Merchandise -->
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-controller icon"></i></div>
+              <h4><a href="https://www.marvel.com/games" class="stretched-link" target="_blank">Games & More</a></h4>
+              <p>From AAA video games to theme parks, merchandise, and live events — Marvel is everywhere.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section><!-- /Franchise Section -->
+
+    <!-- ======= SECTION 4: INSTAGRAM POSTS ======= -->
+    <section id="posts" class="posts-section section" style="background-color: #f9f9f9; padding: 60px 0;">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Posts</h2>
+        <p>All the posts and content straight from <strong>@marvel</strong> on Instagram</p>
+      </div>
+
+      <div class="container">
+
+        <!-- Filter Buttons -->
+        <ul class="post-filters d-flex justify-content-center" data-aos="fade-up" data-aos-delay="80">
+          <li class="filter-active" data-filter="all" onclick="filterPosts(this, 'all')">All Posts</li>
+        </ul>
+
+        <div class="row gy-4" id="postsGrid" data-aos="fade-up" data-aos-delay="160">
+
+          <!-- Post 1 -->
+          <div class="col-lg-4 col-md-6 post-item" data-category="trailer">
+            <div class="post-card">
+              <img src="assets/img/post/the punisher post.png" alt="The Punisher Trailer">
+              <div class="post-info">
+                <h5>The Punisher: One Last Kill — Official Trailer</h5>
+                <p>A Marvel Television Special Presentation: The Punisher: One Last Kill premieres May 12, only on Disney+.</p>
+                <div class="post-meta">
+                  <i class="bi bi-heart-fill"></i> 1.3M likes
+                  <i class="bi bi-chat-fill ms-2"></i> 9073 comments
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Post 2 -->
+          <div class="col-lg-4 col-md-6 post-item" data-category="series">
+            <div class="post-card">
+              <img src="assets/img/post/daredevil season 2 trailer.png" alt="Daredevil Season 2 Trailer">
+              <div class="post-info">
+                <h5>Daredevil Season 2 Trailer</h5>
+                <p>Stream Marvel Television’s #DaredevilBornAgain Season 2 now, only on Disney+. And don’t miss A Marvel Television Special Presentation: The Punisher: One Last Kill, streaming May 12 on Disney+.</p>
+                <div class="post-meta">
+                  <i class="bi bi-heart-fill"></i> 284K likes
+                  <i class="bi bi-chat-fill ms-2"></i> 1308 comments
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Post 3 -->
+          <div class="col-lg-4 col-md-6 post-item" data-category="comics">
+            <div class="post-card">
+              <img src="assets/img/post/avengers doomsday.png" alt="Avengers Doomsday">
+              <div class="post-info">
+                <h5>Avengers: Doomsday</h5>
+                <p>Doomsday is coming. December 18, 2026. #AvengersDoomsday</p>
+                <div class="post-meta">
+                  <i class="bi bi-heart-fill"></i> 2,4M likes
+                  <i class="bi bi-chat-fill ms-2"></i> 6872 comments
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Post 4 -->
+          <div class="col-lg-4 col-md-6 post-item" data-category="bts">
+            <div class="post-card">
+              <img src="assets/img/post/daredevil stream.png" alt="Daredevil Stream">
+              <div class="post-info">
+                <h5>Daredevil Born Again Stream</h5>
+                <p>Don’t miss the gripping Season 2 finale of Marvel Television’s #DaredevilBornAgain, streaming tonight at 6PM PT only on Disney+</p>
+                <div class="post-meta">
+                  <i class="bi bi-heart-fill"></i> 88,6K likes
+                  <i class="bi bi-chat-fill ms-2"></i> 390 comments
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Post 5 -->
+          <div class="col-lg-4 col-md-6 post-item" data-category="comics">
+            <div class="post-card">
+              <img src="assets/img/post/marvel comic panel.png" alt="Marvel Comics">
+              <div class="post-info">
+                <h5>Civil War Comic</h5>
+                <p>Civil War (2006) #7 ➡️ Captain America: Civil War</p>
+                <div class="post-meta">
+                  <i class="bi bi-heart-fill"></i> 65K likes
+                  <i class="bi bi-chat-fill ms-2"></i> 176 comments
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Post 6 -->
+          <div class="col-lg-4 col-md-6 post-item" data-category="series">
+            <div class="post-card">
+              <img src="assets/img/post/daredevil post.png">
+              <div class="post-info">
+                <h5>"Daredevil Post"</h5>
+                <p>Matthew Murdock for the defense, Your Honors. Stream a new episode of Marvel Television's #DaredevilBornAgain Season 2, now on Disney+.</p>
+                <div class="post-meta">
+                  <i class="bi bi-heart-fill"></i> 320k likes
+                  <i class="bi bi-chat-fill ms-2"></i> 316 comments
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /Row -->
+
+        <!-- View More on Instagram -->
+        <div class="text-center mt-5" data-aos="fade-up">
+          <a href="https://www.instagram.com/marvel" target="_blank" class="btn-get-started" style="display:inline-flex; align-items:center; gap:8px; padding:12px 30px; text-decoration:none;">
+            <i class="bi bi-instagram"></i> View More on Instagram
+          </a>
+        </div>
+
+      </div>
+
+    </section><!-- /Instagram Posts Section -->
+
+    <!-- ======= SECTION 5: FEATURED MOVIES (Portfolio Section) ======= -->
+    <section id="movies" class="portfolio section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Featured Movies</h2>
+        <p>Explore the Marvel Cinematic Universe — from Phase 1 classics to Phase 6 upcoming blockbusters &amp; Disney+ Series</p>
+      </div>
+
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <!-- Filter Buttons -->
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-phase1">Phase 1</li>
+            <li data-filter=".filter-phase2">Phase 2</li>
+            <li data-filter=".filter-phase3">Phase 3</li>
+            <li data-filter=".filter-phase4">Phase 4</li>
+            <li data-filter=".filter-phase5">Phase 5</li>
+            <li data-filter=".filter-phase6">Phase 6</li>
+            <li data-filter=".filter-series">Series</li>
+          </ul>
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <!-- ===== PHASE 1 ===== -->
+            <!-- Iron Man -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-phase1">
+              <img src="assets/img/movieposter/iron man 1.jpeg" class="img-fluid movie-card-img" alt="Iron Man"
+                onerror="this.src='https://placehold.co/400x240/7B0000/ffffff?text=Iron+Man+(2008)'">
+              <div class="portfolio-info">
+                <div class="phase-badge">Phase 1</div>
+                <h4>Iron Man (2008)</h4>
+                <p>Genius billionaire Tony Stark builds a powered armor suit and becomes Iron Man to save the world</p>
+                <a href="assets/img/movieposter/iron man 1.jpeg" title="Iron Man"
+                  data-gallery="portfolio-gallery-phase1" class="glightbox preview-link">
+                  <i class="bi bi-zoom-in"></i>
+                </a>
+                <a href="https://www.marvel.com/movies/iron-man" title="More Details" class="details-link" target="_blank">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- The Incredible Hulk -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-phase1">
+              <img src="assets/img/movieposter/incredible hulk.jpg" class="img-fluid movie-card-img" alt="The Incredible Hulk"
+                onerror="this.src='https://placehold.co/400x240/7B0000/ffffff?text=The+Incredible+Hulk+(2008)'">
+              <div class="portfolio-info">
+                <div class="phase-badge">Phase 1</div>
+                <h4>The Incredible Hulk (2008)</h4>
+                <p>Bruce Banner struggles to cure himself of the Hulk while being hunted by General Thaddeus Ross</p>
+                <a href="assets/img/movieposter/incredible hulk.jpg" title="The Incredible Hulk"
+                  data-gallery="portfolio-gallery-phase1" class="glightbox preview-link">
+                  <i class="bi bi-zoom-in"></i>
+                </a>
+                <a href="https://www.marvel.com/movies/the-incredible-hulk" title="More Details" class="details-link" target="_blank">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Iron Man 2 -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-phase1">
+              <img src="assets/img/movieposter/iron man 2.png" class="img-fluid movie-card-img" alt="Iron Man 2"
+                onerror="this.src='https://placehold.co/400x240/7B0000/ffffff?text=Iron+Man+2+(2010)'">
+              <div class="portfolio-info">
+                <div class="phase-badge">Phase 1</div>
+                <h4>Iron Man 2 (2010)</h4>
+                <p>Tony Stark faces a new enemy Ivan Vanko while dealing with the poisoning effects of his arc reactor</p>
+                <a href="assets/img/movieposter/iron man 2.png" title="Iron Man 2"
+                  data-gallery="portfolio-gallery-phase1" class="glightbox preview-link">
+                  <i class="bi bi-zoom-in"></i>
+                </a>
+                <a href="https://www.marvel.com/movies/iron-man-2" title="More Details" class="details-link" target="_blank">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Thor -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-phase1">
+              <img src="assets/img/movieposter/thor.jpg" class="img-fluid movie-card-img" alt="Thor"
+                onerror="this.src='https://placehold.co/400x240/7B0000/ffffff?text=Thor+(2011)'">
+              <div class="portfolio-info">
+                <div class="phase-badge">Phase 1</div>
+                <h4>Thor (2011)</h4>
+                <p>The arrogant Asgardian prince Thor is banished to Earth and must prove himself worthy of his power</p>
+                <a href="assets/img/movieposter/thor.jpg" title="Thor"
+                  data-gallery="portfolio-gallery-phase1" class="glightbox preview-link">
+                  <i class="bi bi-zoom-in"></i>
+                </a>
+                <a href="https://www.marvel.com/movies/thor" title="More Details" class="details-link" target="_blank">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Captain America: The First Avenger -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-phase1">
+              <img src="assets/img/movieposter/captain america the first avenger.jpg" class="img-fluid movie-card-img" alt="Captain America: The First Avenger"
+                onerror="this.src='https://placehold.co/400x240/7B0000/ffffff?text=Captain+America+(2011)'">
+              <div class="portfolio-info">
+                <div class="phase-badge">Phase 1</div>
+                <h4>Captain America: The First Avenger (2011)</h4>
+                <p>Steve Rogers transforms into a super-soldier to battle the villainous Red Skull during World War II</p>
+                <a href="assets/img/movieposter/captain america the first avenger.jpg" title="Captain America: The First Avenger"
+                  data-gallery="portfolio-gallery-phase1" class="glightbox preview-link">
+                  <i class="bi bi-zoom-in"></i>
+                </a>
+                <a href="https://www.marvel.com/movies/captain-america-the-first-avenger" title="More Details" class="details-link" target="_blank">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- The Avengers -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-phase1">
+              <img src="assets/img/movieposter/avengers-2012.webp" class="img-fluid movie-card-img" alt="The Avengers"
+                onerror="this.src='https://placehold.co/400x240/7B0000/ffffff?text=The+Avengers+(2012)'">
+              <div class="portfolio-info">
+                <div class="phase-badge">Phase 1</div>
+                <h4>The Avengers (2012)</h4>
+                <p>Earth's Mightiest Heroes assemble for the first time to stop Loki and the Chitauri alien invasion</p>
+                <a href="assets/img/movieposter/avengers-2012.webp" title="The Avengers"
+                  data-gallery="portfolio-gallery-phase1" class="glightbox preview-link">
+                  <i class="bi bi-zoom-in"></i>
+                </a>
+                <a href="https://www.marvel.com/movies/the-avengers" title="More Details" class="details-link" target="_blank">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- ===== PHASE 2 ===== -->
+            <!-- Iron Man 3 -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-phase2">
+              <img src="assets/img/movieposter/iron man 3.jpg" class="img-fluid movie-card-img" alt="Iron Man 3"
+                onerror="this.src='https://placehold.co/400x240/003366/ffffff?text=Iron+Man+3+(2013)'">
+              <div class="portfolio-info">
+                <div class="phase-badge">Phase 2</div>
+                <h4>Iron Man 3 (2013)</h4>
+                <p>Tony Stark faces a powerful enemy called the Mandarin while suffering from anxiety after the Battle of New York</p>
+                <a href="assets/img/movieposter/iron man 3.jpg" title="Iron Man 3"
+                  data-gallery="portfolio-gallery-phase2" class="glightbox preview-link">
+                  <i class="bi bi-zoom-in"></i>
+                </a>
+                <a href="https://www.marvel.com/movies/iron-man-3" title="More Details" class="details-link" target="_blank">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Thor: The Dark World -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-phase2">
+              <img src="assets/img/movieposter/thor the dark world.jpg" class="img-fluid movie-card-img" alt="Thor: The Dark World"
+                onerror="this.src='https://placehold.co/400x240/003366/ffffff?text=Thor+The+Dark+World+(2013)'">
+              <div class="portfolio-info">
+                <div class="phase-badge">Phase 2</div>
+                <h4>Thor: The Dark World (2013)</h4>
+                <p>Thor must stop the Dark Elf Malekith from unleashing a powerful weapon called the Aether upon the universe</p>
+                <a href="assets/img/movieposter/thor the dark world.jpg" title="Thor: The Dark World"
+                  data-gallery="portfolio-gallery-phase2" class="glightbox preview-link">
+                  <i class="bi bi-zoom-in"></i>
+                </a>
+                <a href="https://www.marvel.com/movies/thor-the-dark-world" title="More Details" class="details-link" target="_blank">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Captain America: The Winter Soldier -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-phase2">
+              <img src="assets/img/movieposter/captain america the winter soldier.jpg" class="img-fluid movie-card-img" alt="Captain America: The Winter Soldier"
+                onerror="this.src='https://placehold.co/400x240/003366/ffffff?text=The+Winter+Soldier+(2014)'">
+              <div class="portfolio-info">
+                <div class="phase-badge">Phase 2</div>
+                <h4>Captain America: The Winter Soldier (2014)</h4>
+                <p>Steve Rogers uncovers a massive conspiracy within S.H.I.E.L.D. while battling a deadly new enemy</p>
+                <a href="assets/img/movieposter/captain america the winter soldier.jpg" title="Captain America: The Winter Soldier"
+                  data-gallery="portfolio-gallery-phase2" class="glightbox preview-link">
+                  <i class="bi bi-zoom-in"></i>
+                </a>
+                <a href="https://www.marvel.com/movies/captain-america-the-winter-soldier" title="More Details" class="details-link" target="_blank">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Guardians of the Galaxy -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-phase2">
+              <img src="assets/img/movieposter/gotg vol 1.jpg" class="img-fluid movie-card-img" alt="Guardians of the Galaxy"
+                onerror="this.src='https://placehold.co/400x240/003366/ffffff?text=Guardians+of+the+Galaxy+(2014)'">
+              <div class="portfolio-info">
+                <div class="phase-badge">Phase 2</div>
+                <h4>Guardians of the Galaxy (2014)</h4>
+                <p>A ragtag group of cosmic misfits team up to protect a powerful orb from the villainous Ronan</p>
+                <a href="assets/img/movieposter/gotg vol 1.jpg" title="Guardians of the Galaxy"
+                  data-gallery="portfolio-gallery-phase2" class="glightbox preview-link">
+                  <i class="bi bi-zoom-in"></i>
+                </a>
+                <a href="https://www.marvel.com/movies/guardians-of-the-galaxy" title="More Details" class="details-link" target="_blank">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Avengers: Age of Ultron -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-phase2">
+              <img src="assets/img/movieposter/avengers age of ultron.jpg" class="img-fluid movie-card-img" alt="Avengers: Age of Ultron"
+                onerror="this.src='https://placehold.co/400x240/003366/ffffff?text=Age+of+Ultron+(2015)'">
+              <div class="portfolio-info">
+                <div class="phase-badge">Phase 2</div>
+                <h4>Avengers: Age of Ultron (2015)</h4>
+                <p>Tony Stark creates Ultron, an AI peacekeeping program that turns against humanity, forcing the Avengers to unite</p>
+                <a href="assets/img/movieposter/avengers age of ultron.jpg" title="Avengers: Age of Ultron"
+                  data-gallery="portfolio-gallery-phase2" class="glightbox preview-link">
+                  <i class="bi bi-zoom-in"></i>
+                </a>
+                <a href="https://www.marvel.com/movies/avengers-age-of-ultron" title="More Details" class="details-link" target="_blank">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Ant-Man -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-phase2">
+              <img src="assets/img/movieposter/ant man 1.jpg" class="img-fluid movie-card-img" alt="Ant-Man"
+                onerror="this.src='https://placehold.co/400x240/003366/ffffff?text=Ant-Man+(2015)'">
+              <div class="portfolio-info">
+                <div class="phase-badge">Phase 2</div>
+                <h4>Ant-Man (2015)</h4>
+                <p>Scott Lang becomes the new Ant-Man, using a suit that allows him to shrink in size and increase in strength</p>
+                <a href="assets/img/movieposter/ant man 1.jpg" title="Ant-Man"
+                  data-gallery="portfolio-gallery-phase2" class="glightbox preview-link">
+                  <i class="bi bi-zoom-in"></i>
+                </a>
+                <a href="https://www.marvel.com/movies/ant-man" title="More Details" class="details-link" target="_blank">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- ===== PHASE 3 ===== -->
+            <!-- Captain America: Civil War -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-phase3">
+              <img src="assets/img/movieposter/captain america civil war.jpg" class="img-fluid movie-card-img" alt="Captain America: Civil War"
+                onerror="this.src='https://placehold.co/400x240/4A0080/ffffff?text=Civil+War+(2016)'">
+              <div class="portfolio-info">
+                <div class="phase-badge">Phase 3</div>
+                <h4>Captain America: Civil War (2016)</h4>
+                <p>The Avengers are divided when government oversight causes a rift between Captain America and Iron Man</p>
+                <a href="assets/img/movieposter/captain america civil war.jpg" title="Captain America: Civil War"
+                  data-gallery="portfolio-gallery-phase3" class="glightbox preview-link">
+                  <i class="bi bi-zoom-in"></i>
+                </a>
+                <a href="https://www.marvel.com/movies/captain-america-civil-war" title="More Details" class="details-link" target="_blank">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Doctor Strange -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-phase3">
+              <img src="assets/img/movieposter/dr strange.jpg" class="img-fluid movie-card-img" alt="Doctor Strange"
+                onerror="this.src='https://placehold.co/400x240/4A0080/ffffff?text=Doctor+Strange+(2016)'">
+              <div class="portfolio-info">
+                <div class="phase-badge">Phase 3</div>
+                <h4>Doctor Strange (2016)</h4>
+                <p>Brilliant surgeon Stephen Strange discovers the world of magic and alternate dimensions after a life-changing accident</p>
+                <a href="assets/img/movieposter/dr strange.jpg" title="Doctor Strange"
+                  data-gallery="portfolio-gallery-phase3" class="glightbox preview-link">
+                  <i class="bi bi-zoom-in"></i>
+                </a>
+                <a href="https://www.marvel.com/movies/doctor-strange" title="More Details" class="details-link" target="_blank">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Guardians of the Galaxy Vol. 2 -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-phase3">
+              <img src="assets/img/movieposter/gotg 2.jpg" class="img-fluid movie-card-img" alt="Guardians of the Galaxy Vol. 2"
+                onerror="this.src='https://placehold.co/400x240/4A0080/ffffff?text=Guardians+Vol.+2+(2017)'">
+              <div class="portfolio-info">
+                <div class="phase-badge">Phase 3</div>
+                <h4>Guardians of the Galaxy Vol. 2 (2017)</h4>
+                <p>The Guardians embark on a journey to uncover the mystery of Peter Quill's true parentage across the cosmos</p>
+                <a href="assets/img/movieposter/gotg 2.jpg" title="Guardians of the Galaxy Vol. 2"
+                  data-gallery="portfolio-gallery-phase3" class="glightbox preview-link">
+                  <i class="bi bi-zoom-in"></i>
+                </a>
+                <a href="https://www.marvel.com/movies/guardians-of-the-galaxy-vol-2" title="More Details" class="details-link" target="_blank">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Spider-Man: Homecoming -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-phase3">
+              <img src="assets/img/movieposter/spiderman homecoming.jpg" class="img-fluid movie-card-img" alt="Spider-Man: Homecoming"
+                onerror="this.src='https://placehold.co/400x240/4A0080/ffffff?text=Homecoming+(2017)'">
+              <div class="portfolio-info">
+                <div class="phase-badge">Phase 3</div>
+                <h4>Spider-Man: Homecoming (2017)</h4>
+                <p>Young Peter Parker balances his high school life while trying to prove himself as Spider-Man to Tony Stark</p>
+                <a href="assets/img/movieposter/spiderman homecoming.jpg" title="Spider-Man: Homecoming"
+                  data-gallery="portfolio-gallery-phase3" class="glightbox preview-link">
+                  <i class="bi bi-zoom-in"></i>
+                </a>
+                <a href="https://www.marvel.com/movies/spider-man-homecoming" title="More Details" class="details-link" target="_blank">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Thor: Ragnarok -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-phase3">
+              <img src="assets/img/movieposter/thor ragnarok.jpg" class="img-fluid movie-card-img" alt="Thor: Ragnarok"
+                onerror="this.src='https://placehold.co/400x240/4A0080/ffffff?text=Thor+Ragnarok+(2017)'">
+              <div class="portfolio-info">
+                <div class="phase-badge">Phase 3</div>
+                <h4>Thor: Ragnarok (2017)</h4>
+                <p>Thor is stranded on a distant planet and must race against time to save Asgard from the ruthless Hela</p>
+                <a href="assets/img/movieposter/thor ragnarok.jpg" title="Thor: Ragnarok"
+                  data-gallery="portfolio-gallery-phase3" class="glightbox preview-link">
+                  <i class="bi bi-zoom-in"></i>
+                </a>
+                <a href="https://www.marvel.com/movies/thor-ragnarok" title="More Details" class="details-link" target="_blank">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Black Panther -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-phase3">
+              <img src="assets/img/movieposter/black-panther-2018.webp" class="img-fluid movie-card-img" alt="Black Panther"
+                onerror="this.src='https://placehold.co/400x240/4A0080/ffffff?text=Black+Panther+(2018)'">
+              <div class="portfolio-info">
+                <div class="phase-badge">Phase 3</div>
+                <h4>Black Panther (2018)</h4>
+                <p>T'Challa returns home to Wakanda to claim the throne and must defend his nation against a powerful challenger</p>
+                <a href="assets/img/movieposter/black-panther-2018.webp" title="Black Panther"
+                  data-gallery="portfolio-gallery-phase3" class="glightbox preview-link">
+                  <i class="bi bi-zoom-in"></i>
+                </a>
+                <a href="https://www.marvel.com/movies/black-panther" title="More Details" class="details-link" target="_blank">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- ===== PHASE 4 ===== -->
+            <!-- Black Widow -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-phase4">
+              <img src="assets/img/movieposter/black widow.jpeg" class="img-fluid movie-card-img" alt="Black Widow"
+                onerror="this.src='https://placehold.co/400x240/004400/ffffff?text=Black+Widow+(2021)'">
+              <div class="portfolio-info">
+                <div class="phase-badge">Phase 4</div>
+                <h4>Black Widow (2021)</h4>
+                <p>Natasha Romanoff confronts the darker parts of her ledger while being hunted by a force that will stop at nothing</p>
+                <a href="assets/img/movieposter/black widow.jpeg" title="Black Widow"
+                  data-gallery="portfolio-gallery-phase4" class="glightbox preview-link">
+                  <i class="bi bi-zoom-in"></i>
+                </a>
+                <a href="https://www.marvel.com/movies/black-widow" title="More Details" class="details-link" target="_blank">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Shang-Chi -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-phase4">
+              <img src="assets/img/movieposter/shang chi.jpeg" class="img-fluid movie-card-img" alt="Shang-Chi and the Legend of the Ten Rings"
+                onerror="this.src='https://placehold.co/400x240/004400/ffffff?text=Shang-Chi+(2021)'">
+              <div class="portfolio-info">
+                <div class="phase-badge">Phase 4</div>
+                <h4>Shang-Chi and the Legend of the Ten Rings (2021)</h4>
+                <p>Shang-Chi is forced to confront the past he thought he left behind when drawn into the Ten Rings organization</p>
+                <a href="assets/img/movieposter/shang chi.jpeg" title="Shang-Chi"
+                  data-gallery="portfolio-gallery-phase4" class="glightbox preview-link">
+                  <i class="bi bi-zoom-in"></i>
+                </a>
+                <a href="https://www.marvel.com/movies/shang-chi-and-the-legend-of-the-ten-rings" title="More Details" class="details-link" target="_blank">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Eternals -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-phase4">
+              <img src="assets/img/movieposter/eternals.jpg" class="img-fluid movie-card-img" alt="Eternals"
+                onerror="this.src='https://placehold.co/400x240/004400/ffffff?text=Eternals+(2021)'">
+              <div class="portfolio-info">
+                <div class="phase-badge">Phase 4</div>
+                <h4>Eternals (2021)</h4>
+                <p>A group of ancient immortal beings who secretly lived on Earth must reunite to protect humanity from their enemies</p>
+                <a href="assets/img/movieposter/eternals.jpg" title="Eternals"
+                  data-gallery="portfolio-gallery-phase4" class="glightbox preview-link">
+                  <i class="bi bi-zoom-in"></i>
+                </a>
+                <a href="https://www.marvel.com/movies/eternals" title="More Details" class="details-link" target="_blank">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Spider-Man: No Way Home -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-phase4">
+              <img src="assets/img/movieposter/spiderman nwh.jpg" class="img-fluid movie-card-img" alt="Spider-Man: No Way Home"
+                onerror="this.src='https://placehold.co/400x240/004400/ffffff?text=No+Way+Home+(2021)'">
+              <div class="portfolio-info">
+                <div class="phase-badge">Phase 4</div>
+                <h4>Spider-Man: No Way Home (2021)</h4>
+                <p>Peter Parker asks Doctor Strange to make everyone forget he is Spider-Man, but things spiral dangerously out of control</p>
+                <a href="assets/img/movieposter/spiderman nwh.jpg" title="Spider-Man: No Way Home"
+                  data-gallery="portfolio-gallery-phase4" class="glightbox preview-link">
+                  <i class="bi bi-zoom-in"></i>
+                </a>
+                <a href="https://www.marvel.com/movies/spider-man-no-way-home" title="More Details" class="details-link" target="_blank">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Doctor Strange in the Multiverse of Madness -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-phase4">
+              <img src="assets/img/movieposter/dr strange MoM.jpeg" class="img-fluid movie-card-img" alt="Doctor Strange in the Multiverse of Madness"
+                onerror="this.src='https://placehold.co/400x240/004400/ffffff?text=Multiverse+of+Madness+(2022)'">
+              <div class="portfolio-info">
+                <div class="phase-badge">Phase 4</div>
+                <h4>Doctor Strange in the Multiverse of Madness (2022)</h4>
+                <p>Doctor Strange traverses the dangerous multiverse to protect a girl with the power to travel between realities</p>
+                <a href="assets/img/movieposter/dr strange MoM.jpeg" title="Doctor Strange in the Multiverse of Madness"
+                  data-gallery="portfolio-gallery-phase4" class="glightbox preview-link">
+                  <i class="bi bi-zoom-in"></i>
+                </a>
+                <a href="https://www.marvel.com/movies/doctor-strange-in-the-multiverse-of-madness" title="More Details" class="details-link" target="_blank">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Thor: Love and Thunder -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-phase4">
+              <img src="assets/img/movieposter/thor love n thunder.png" class="img-fluid movie-card-img" alt="Thor: Love and Thunder"
+                onerror="this.src='https://placehold.co/400x240/004400/ffffff?text=Love+and+Thunder+(2022)'">
+              <div class="portfolio-info">
+                <div class="phase-badge">Phase 4</div>
+                <h4>Thor: Love and Thunder (2022)</h4>
+                <p>Thor embarks on a journey of self-discovery, but his retirement is interrupted by Gorr the God Butcher</p>
+                <a href="assets/img/movieposter/thor love n thunder.png" title="Thor: Love and Thunder"
+                  data-gallery="portfolio-gallery-phase4" class="glightbox preview-link">
+                  <i class="bi bi-zoom-in"></i>
+                </a>
+                <a href="https://www.marvel.com/movies/thor-love-and-thunder" title="More Details" class="details-link" target="_blank">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- ===== PHASE 5 ===== -->
+            <!-- Ant-Man and the Wasp: Quantumania -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-phase5">
+              <img src="assets/img/movieposter/antman quantumania.jpeg" class="img-fluid movie-card-img" alt="Ant-Man and the Wasp: Quantumania"
+                onerror="this.src='https://placehold.co/400x240/7A3B00/ffffff?text=Quantumania+(2023)'">
+              <div class="portfolio-info">
+                <div class="phase-badge">Phase 5</div>
+                <h4>Ant-Man and the Wasp: Quantumania (2023)</h4>
+                <p>Scott Lang and his family are pulled into the Quantum Realm and must face the powerful conqueror Kang</p>
+                <a href="assets/img/movieposter/antman quantumania.jpeg" title="Ant-Man and the Wasp: Quantumania"
+                  data-gallery="portfolio-gallery-phase5" class="glightbox preview-link">
+                  <i class="bi bi-zoom-in"></i>
+                </a>
+                <a href="https://www.marvel.com/movies/ant-man-and-the-wasp-quantumania" title="More Details" class="details-link" target="_blank">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Guardians of the Galaxy Vol. 3 -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-phase5">
+              <img src="assets/img/movieposter/gotg vol 3.jpeg" class="img-fluid movie-card-img" alt="Guardians of the Galaxy Vol. 3"
+                onerror="this.src='https://placehold.co/400x240/7A3B00/ffffff?text=Guardians+Vol.+3+(2023)'">
+              <div class="portfolio-info">
+                <div class="phase-badge">Phase 5</div>
+                <h4>Guardians of the Galaxy Vol. 3 (2023)</h4>
+                <p>The beloved crew of misfits face a powerful new villain in a mission to protect one of their own</p>
+                <a href="assets/img/movieposter/gotg vol 3.jpeg" title="Guardians of the Galaxy Vol. 3"
+                  data-gallery="portfolio-gallery-phase5" class="glightbox preview-link">
+                  <i class="bi bi-zoom-in"></i>
+                </a>
+                <a href="https://www.marvel.com/movies/guardians-of-the-galaxy-vol-3" title="More Details" class="details-link" target="_blank">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- The Marvels -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-phase5">
+              <img src="assets/img/movieposter/the marvels.jpeg" class="img-fluid movie-card-img" alt="The Marvels"
+                onerror="this.src='https://placehold.co/400x240/7A3B00/ffffff?text=The+Marvels+(2023)'">
+              <div class="portfolio-info">
+                <div class="phase-badge">Phase 5</div>
+                <h4>The Marvels (2023)</h4>
+                <p>Carol Danvers, Kamala Khan, and Monica Rambeau find their powers entangled and must team up to save the universe</p>
+                <a href="assets/img/movieposter/the marvels.jpeg" title="The Marvels"
+                  data-gallery="portfolio-gallery-phase5" class="glightbox preview-link">
+                  <i class="bi bi-zoom-in"></i>
+                </a>
+                <a href="https://www.marvel.com/movies/the-marvels" title="More Details" class="details-link" target="_blank">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Deadpool & Wolverine -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-phase5">
+              <img src="assets/img/movieposter/deadpool & wolverine.jpg" class="img-fluid movie-card-img" alt="Deadpool & Wolverine"
+                onerror="this.src='https://placehold.co/400x240/7A3B00/ffffff?text=Deadpool+%26+Wolverine+(2024)'">
+              <div class="portfolio-info">
+                <div class="phase-badge">Phase 5</div>
+                <h4>Deadpool &amp; Wolverine (2024)</h4>
+                <p>Wade Wilson teams up with Wolverine in a time-traveling adventure that changes the MCU forever</p>
+                <a href="assets/img/movieposter/deadpool & wolverine.jpg" title="Deadpool &amp; Wolverine"
+                  data-gallery="portfolio-gallery-phase5" class="glightbox preview-link">
+                  <i class="bi bi-zoom-in"></i>
+                </a>
+                <a href="https://www.marvel.com/movies/deadpool-and-wolverine" title="More Details" class="details-link" target="_blank">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Captain America: Brave New World -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-phase5">
+              <img src="assets/img/movieposter/brave new world.jpg" class="img-fluid movie-card-img" alt="Captain America: Brave New World"
+                onerror="this.src='https://placehold.co/400x240/7A3B00/ffffff?text=Brave+New+World+(2025)'">
+              <div class="portfolio-info">
+                <div class="phase-badge">Phase 5</div>
+                <h4>Captain America: Brave New World (2025)</h4>
+                <p>Sam Wilson takes on the mantle of Captain America and finds himself caught in a complex international conspiracy</p>
+                <a href="assets/img/movieposter/brave new world.jpg" title="Captain America: Brave New World"
+                  data-gallery="portfolio-gallery-phase5" class="glightbox preview-link">
+                  <i class="bi bi-zoom-in"></i>
+                </a>
+                <a href="https://www.marvel.com/movies/captain-america-brave-new-world" title="More Details" class="details-link" target="_blank">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Thunderbolts* -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-phase5">
+              <img src="assets/img/movieposter/thunderbolts.webp" class="img-fluid movie-card-img" alt="Thunderbolts*"
+                onerror="this.src='https://placehold.co/400x240/7A3B00/ffffff?text=Thunderbolts*(2025)'">
+              <div class="portfolio-info">
+                <div class="phase-badge">Phase 5</div>
+                <h4>Thunderbolts* (2025)</h4>
+                <p>A team of reformed antiheroes and villains are assembled for a dangerous government-sanctioned mission</p>
+                <a href="assets/img/movieposter/thunderbolts.webpg" title="Thunderbolts*"
+                  data-gallery="portfolio-gallery-phase5" class="glightbox preview-link">
+                  <i class="bi bi-zoom-in"></i>
+                </a>
+                <a href="https://www.marvel.com/movies/thunderbolts" title="More Details" class="details-link" target="_blank">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- ===== PHASE 6 ===== -->
+            <!-- The Fantastic Four: First Steps -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-phase6">
+              <img src="assets/img/movieposter/fantastic four the first steps.jpg" class="img-fluid movie-card-img" alt="The Fantastic Four: First Steps"
+                onerror="this.src='https://placehold.co/400x240/004444/ffffff?text=Fantastic+Four+(2025)'">
+              <div class="portfolio-info">
+                <div class="phase-badge">Phase 6</div>
+                <h4>The Fantastic Four: First Steps (2025)</h4>
+                <p>Marvel's First Family — Mr. Fantastic, Invisible Woman, Human Torch, and The Thing — make their MCU debut</p>
+                <a href="assets/img/movieposter/fantastic four the first steps.jpg" title="The Fantastic Four: First Steps"
+                  data-gallery="portfolio-gallery-phase6" class="glightbox preview-link">
+                  <i class="bi bi-zoom-in"></i>
+                </a>
+                <a href="https://www.marvel.com/movies/the-fantastic-four-first-steps" title="More Details" class="details-link" target="_blank">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Blade -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-phase6">
+              <img src="assets/img/movieposter/blade.png" class="img-fluid movie-card-img" alt="Blade"
+                onerror="this.src='https://placehold.co/400x240/004444/ffffff?text=Blade+(TBA)'">
+              <div class="portfolio-info">
+                <div class="phase-badge">Phase 6</div>
+                <h4>Blade (TBA)</h4>
+                <p>Eric Brooks, the half-human half-vampire Daywalker, hunts the supernatural threats hiding in the shadows of the MCU</p>
+                <a href="assets/img/movieposter/blade.png" title="Blade"
+                  data-gallery="portfolio-gallery-phase6" class="glightbox preview-link">
+                  <i class="bi bi-zoom-in"></i>
+                </a>
+                <a href="https://www.marvel.com/movies/blade" title="More Details" class="details-link" target="_blank">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Avengers: Doomsday -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-phase6">
+              <img src="assets/img/movieposter/avengers doomsday.jpeg" class="img-fluid movie-card-img" alt="Avengers: Doomsday"
+                onerror="this.src='https://placehold.co/400x240/004444/ffffff?text=Avengers+Doomsday+(2026)'">
+              <div class="portfolio-info">
+                <div class="phase-badge">Phase 6</div>
+                <h4>Avengers: Doomsday (2026)</h4>
+                <p>The Avengers face their greatest threat yet as the terrifying Doctor Doom threatens the entire multiverse</p>
+                <a href="assets/img/movieposter/avengers doomsday.jpeg" title="Avengers: Doomsday"
+                  data-gallery="portfolio-gallery-phase6" class="glightbox preview-link">
+                  <i class="bi bi-zoom-in"></i>
+                </a>
+                <a href="https://www.marvel.com/movies/avengers-doomsday" title="More Details" class="details-link" target="_blank">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Spider-Man 4 -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-phase6">
+              <img src="assets/img/movieposter/spiderman bnd.jpg" class="img-fluid movie-card-img" alt="Spider-Man 4"
+                onerror="this.src='https://placehold.co/400x240/004444/ffffff?text=Spider-Man+4+(TBA)'">
+              <div class="portfolio-info">
+                <div class="phase-badge">Phase 6</div>
+                <h4>Spider-Man 4 (TBA)</h4>
+                <p>Peter Parker returns in a brand-new solo adventure as part of the Multiverse Saga's culminating chapter</p>
+                <a href="assets/img/movieposter/spiderman bnd.jpg" title="Spider-Man 4"
+                  data-gallery="portfolio-gallery-phase6" class="glightbox preview-link">
+                  <i class="bi bi-zoom-in"></i>
+                </a>
+                <a href="https://www.marvel.com/movies" title="More Details" class="details-link" target="_blank">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- ===== SERIES ===== -->
+            <!-- WandaVision -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-series">
+              <img src="assets/img/movieposter/wandavision.jpg" class="img-fluid movie-card-img" alt="WandaVision"
+                onerror="this.src='https://placehold.co/400x240/333333/ffffff?text=WandaVision+(2021)'">
+              <div class="portfolio-info">
+                <div class="phase-badge">Series</div>
+                <h4>WandaVision (2021)</h4>
+                <p>Wanda Maximoff and Vision live idealized suburban lives in a mystery-filled world that may not be all it seems</p>
+                <a href="assets/img/movieposter/wandavision.jpg" title="WandaVision"
+                  data-gallery="portfolio-gallery-series" class="glightbox preview-link">
+                  <i class="bi bi-zoom-in"></i>
+                </a>
+                <a href="https://www.disneyplus.com" title="Watch on Disney+" class="details-link" target="_blank">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- The Falcon and the Winter Soldier -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-series">
+              <img src="assets/img/movieposter/the falcon and winter soldier.jpg" class="img-fluid movie-card-img" alt="The Falcon and the Winter Soldier"
+                onerror="this.src='https://placehold.co/400x240/333333/ffffff?text=Falcon+%26+Winter+Soldier'">
+              <div class="portfolio-info">
+                <div class="phase-badge">Series</div>
+                <h4>The Falcon and the Winter Soldier (2021)</h4>
+                <p>Sam Wilson and Bucky Barnes team up on a globe-trotting adventure that tests their abilities and patience</p>
+                <a href="assets/img/movieposter/series-falcon-winter-soldier.jpg" title="The Falcon and the Winter Soldier"
+                  data-gallery="portfolio-gallery-series" class="glightbox preview-link">
+                  <i class="bi bi-zoom-in"></i>
+                </a>
+                <a href="https://www.disneyplus.com" title="Watch on Disney+" class="details-link" target="_blank">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Loki -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-series">
+              <img src="assets/img/movieposter/loki.jpg" class="img-fluid movie-card-img" alt="Loki"
+                onerror="this.src='https://placehold.co/400x240/333333/ffffff?text=Loki+(2021)'">
+              <div class="portfolio-info">
+                <div class="phase-badge">Series</div>
+                <h4>Loki (2021)</h4>
+                <p>The God of Mischief steps out of his brother's shadow when he mysteriously escapes through time after the Battle of New York</p>
+                <a href="assets/img/movieposter/loki.jpg" title="Loki"
+                  data-gallery="portfolio-gallery-series" class="glightbox preview-link">
+                  <i class="bi bi-zoom-in"></i>
+                </a>
+                <a href="https://www.disneyplus.com" title="Watch on Disney+" class="details-link" target="_blank">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Hawkeye -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-series">
+              <img src="assets/img/movieposter/hawkeye.jpg" class="img-fluid movie-card-img" alt="Hawkeye"
+                onerror="this.src='https://placehold.co/400x240/333333/ffffff?text=Hawkeye+(2021)'">
+              <div class="portfolio-info">
+                <div class="phase-badge">Series</div>
+                <h4>Hawkeye (2021)</h4>
+                <p>Clint Barton partners with a young archer named Kate Bishop to confront enemies from his past as Ronin</p>
+                <a href="assets/img/movieposter/hawkeye.jpg" title="Hawkeye"
+                  data-gallery="portfolio-gallery-series" class="glightbox preview-link">
+                  <i class="bi bi-zoom-in"></i>
+                </a>
+                <a href="https://www.disneyplus.com" title="Watch on Disney+" class="details-link" target="_blank">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Moon Knight -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-series">
+              <img src="assets/img/movieposter/moonknight.jpg" class="img-fluid movie-card-img" alt="Moon Knight"
+                onerror="this.src='https://placehold.co/400x240/333333/ffffff?text=Moon+Knight+(2022)'">
+              <div class="portfolio-info">
+                <div class="phase-badge">Series</div>
+                <h4>Moon Knight (2022)</h4>
+                <p>Marc Spector, a mercenary with dissociative identity disorder, serves as avatar of the Egyptian moon god Khonshu</p>
+                <a href="assets/img/movieposter/moonknight.jpg" title="Moon Knight"
+                  data-gallery="portfolio-gallery-series" class="glightbox preview-link">
+                  <i class="bi bi-zoom-in"></i>
+                </a>
+                <a href="https://www.disneyplus.com" title="Watch on Disney+" class="details-link" target="_blank">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Daredevil: Born Again -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-series">
+              <img src="assets/img/movieposter/daredevil.jpg" class="img-fluid movie-card-img" alt="Daredevil: Born Again"
+                onerror="this.src='https://placehold.co/400x240/333333/ffffff?text=Daredevil+Born+Again+(2025)'">
+              <div class="portfolio-info">
+                <div class="phase-badge">Series</div>
+                <h4>Daredevil: Born Again (2025)</h4>
+                <p>Matt Murdock and Wilson Fisk face off again in a new chapter that brings the Man Without Fear back to Hell's Kitchen</p>
+                <a href="assets/img/movieposter/daredevil.jpg" title="Daredevil: Born Again"
+                  data-gallery="portfolio-gallery-series" class="glightbox preview-link">
+                  <i class="bi bi-zoom-in"></i>
+                </a>
+                <a href="https://www.disneyplus.com" title="Watch on Disney+" class="details-link" target="_blank">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+              </div>
+            </div>
+
+          </div><!-- End Portfolio Container -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Featured Movies Section -->
+
+    <!-- ======= SECTION 5: CALL TO ACTION — WATCH ON DISNEY+ ======= -->
+    <section id="disney" class="call-to-action section dark-background">
+
+      <div class="container">
+        <div class="row align-items-center" data-aos="zoom-in" data-aos-delay="100">
+
+          <div class="col-xl-9 text-center text-xl-start">
+            <h3>Stream All of Marvel on Disney+</h3>
+            <p>
+              Watch every MCU film, exclusive series like Daredevil: Born Again, Loki, WandaVision,
+              and so much more. New Marvel content drops every week — don't miss a single moment of
+              the Marvel Cinematic Universe.
+            </p>
+          </div>
+
+          <div class="col-xl-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="https://www.disneyplus.com" target="_blank">
+              <i class="bi bi-play-circle-fill me-2"></i>Watch Now
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </section><!-- /Call To Action Section -->
+
+  </main><!-- End Main -->
+
+  <!-- ======= FOOTER ======= -->
+  <footer id="footer" class="footer dark-background" style="background-color: #0d0d0d; padding: 30px 0;">
+    <div class="container text-center">
+      <p style="color: #888; margin-bottom: 5px;">
+        &copy; 2025 <strong style="color: #e23636;">Marvel Entertainment</strong>. All Rights Reserved.
+      </p>
+      <p style="color: #555; font-size: 0.85rem;">
+        Tugas Pra ETS — Pemrograman Web | Template: <a href="https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/" style="color: #e23636;">Arsha by BootstrapMade</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Post Filter Script -->
+  <script>
+    function filterPosts(el, category) {
+      // Update active button
+      document.querySelectorAll('.post-filters li').forEach(li => li.classList.remove('filter-active'));
+      el.classList.add('filter-active');
+
+      // Show/hide cards
+      document.querySelectorAll('.post-item').forEach(item => {
+        if (category === 'all' || item.dataset.category === category) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+</body>
+
+</html>
